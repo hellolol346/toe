@@ -1,8 +1,16 @@
-
+#App {
+  margin-top: 5em;
+  margin-left: 5em;
+}
 
 section {
   display: flex;
 }
-.App {
-  text-align: center;
+
+.pink {
+  background-color: pink;
+}
+.cell {
+  padding: 20px;
+  border: 2px black solid;
 }
