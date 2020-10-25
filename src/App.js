@@ -24,6 +24,7 @@ function App() {
   ]
 
   function isEndingMove() {
+
       // unfortunately, we have only checked 3 rows, and thus only 3 of the 8 win
       // conditions. we must go on.
       // Only use as inspiration, this code has some errors.
@@ -60,6 +61,28 @@ function App() {
 
       
   }
+
+    // checking if there's even one null then game is not drawn
+    // that means all conditions after are non-tie ones
+    if (board.some(x => x !== null)) {
+      setCondition("tie")
+      return true
+    }
+
+      // unfortunately, we have only checked 3 rows, and thus only 3 of the 8 win
+      // conditions. we must go on.
+      // Only use as inspiration, this code has some errors.
+      // board.map(row => {
+      //   if (row.every(cell => cell === "O")) {
+      //     // O has won
+      //     setCondition("o-win")
+      //   }
+      //   if (row.every(cell => cell === "X")) {
+      //     // X has won
+      //     setCondition("x-win")
+      //   }
+      // })
+
 
       // explore a solution with for loops
       // remember that your data is an array of 3 numbers
@@ -109,4 +132,8 @@ export default App;
 // When a player makes a move, the game might end.
 // First we check if someone won.
 // Then we check if there's a tie.
+
 // Otherwise game is not over.
+
+// Otherwise game is not over.
+
